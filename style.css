@@ -1,0 +1,79 @@
+* { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+margin: 0;
+background: linear-gradient(135deg, #89cff0, #1e90ff);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
+cursor: none;
+}
+
+.container {
+background: #e6f0ff;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+width: 100%;
+max-width: 450px;
+position: relative;
+z-index: 1;
+}
+
+h1 { text-align: center; color: #003366; margin-bottom: 20px; }
+
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+
+input[type="text"] {
+flex: 1; padding: 12px; border-radius: 10px;
+border: 1px solid #ccc; outline: none;
+}
+
+button {
+padding: 12px 18px; border: none; border-radius: 10px;
+cursor: pointer; font-weight: bold; color: #fff;
+background-color: #888; transition: 0.3s;
+}
+button:hover { background-color: #666; }
+
+.btn-group {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+}
+
+ul { list-style: none; padding: 0; margin: 0; max-height: 400px; overflow-y: auto; }
+
+li {
+background: #3399ff; padding: 12px; margin-bottom: 12px;
+display: flex; justify-content: space-between;
+align-items: center; border-radius: 10px;
+font-weight: bold; color: #fff;
+cursor: pointer; transition: 0.2s;
+}
+li.completed { text-decoration: line-through; opacity: 0.6; }
+li:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+.delete-btn {
+background: #888; border: none; color: #fff;
+padding: 6px 12px; border-radius: 8px; cursor: pointer;
+}
+.delete-btn:hover { background: #666; }
+
+/* Particle Trail */
+.particle {
+position: fixed;
+width: 8px; height: 8px;
+pointer-events: none;
+border-radius: 50%;
+background-color: yellow;
+opacity: 1;
+z-index: 9999;
+animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+to { opacity: 0; transform: translateY(-20px) scale(0); }
+}
